@@ -30,9 +30,9 @@ internal class AMapMarkerManager : ViewGroupManager<AMapMarker>() {
     override fun getExportedCustomDirectEventTypeConstants(): Map<String, Any>? {
         return MapBuilder.of(
                 "onPress", MapBuilder.of("registrationName", "onPress"),
-                "onDragStart", MapBuilder.of("registrationName", "onDragStart"),
-                "onDrag", MapBuilder.of("registrationName", "onDrag"),
-                "onDragEnd", MapBuilder.of("registrationName", "onDragEnd"),
+                "onAmapDragStart", MapBuilder.of("registrationName", "onAmapDragStart"),
+                "onAmapDrag", MapBuilder.of("registrationName", "onAmapDrag"),
+                "onAmapDragEnd", MapBuilder.of("registrationName", "onAmapDragEnd"),
                 "onInfoWindowPress", MapBuilder.of("registrationName", "onInfoWindowPress")
         )
     }

@@ -5,9 +5,9 @@
 
 @property(nonatomic, copy) RCTBubblingEventBlock onPress;
 @property(nonatomic, copy) RCTBubblingEventBlock onInfoWindowPress;
-@property(nonatomic, copy) RCTBubblingEventBlock onDragStart;
-@property(nonatomic, copy) RCTBubblingEventBlock onDrag;
-@property(nonatomic, copy) RCTBubblingEventBlock onDragEnd;
+@property(nonatomic, copy) RCTBubblingEventBlock onAmapDragStart;
+@property(nonatomic, copy) RCTBubblingEventBlock onAmapDrag;
+@property(nonatomic, copy) RCTBubblingEventBlock onAmapDragEnd;
 
 - (MAAnnotationView *)annotationView;
 - (MAPointAnnotation *)annotation;

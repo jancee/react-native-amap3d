@@ -136,16 +136,16 @@ RCT_EXPORT_METHOD(animateTo:(nonnull NSNumber *)reactTag params:(NSDictionary *)
 - (void)mapView:(AMapView *)mapView annotationView:(MAAnnotationView *)view didChangeDragState:(MAAnnotationViewDragState)newState
    fromOldState:(MAAnnotationViewDragState)oldState {
     AMapMarker *marker = [mapView getMarker:view.annotation];
-    if (newState == MAAnnotationViewDragStateStarting && marker.onDragStart) {
-        marker.onDragStart(nil);
+    if (newState == MAAnnotationViewDragStateStarting && marker.onAmapDragStart) {
+        marker.onAmapDragStart(nil);
     }
     if (newState == MAAnnotationViewDragStateDragging) {
-        if (marker.onDrag) {
-            marker.onDrag(nil);
+        if (marker.onAmapDrag) {
+            marker.onAmapDrag(nil);
         }
     }
-    if (newState == MAAnnotationViewDragStateEnding && marker.onDragEnd) {
-        marker.onDragEnd(@{
+    if (newState == MAAnnotationViewDragStateEnding && marker.onAmapDragEnd) {
+        marker.onAmapDragEnd(@{
                 @"latitude": @(marker.annotation.coordinate.latitude),
                 @"longitude": @(marker.annotation.coordinate.longitude),
         });

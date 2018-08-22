@@ -70,7 +70,7 @@ export default class MarkerExample extends Component {
 
   _onMarkerPress = () => Alert.alert('onPress')
   _onInfoWindowPress = () => Alert.alert('onInfoWindowPress')
-  _onDragEvent = ({ nativeEvent }) => Alert.alert(`${nativeEvent.latitude}, ${nativeEvent.longitude}`)
+  _onAmapDragEvent = ({ nativeEvent }) => Alert.alert(`${nativeEvent.latitude}, ${nativeEvent.longitude}`)
 
   render() {
     return (
@@ -80,7 +80,7 @@ export default class MarkerExample extends Component {
           draggable
           title="一个可拖拽的标记"
           description={this.state.time.toLocaleTimeString()}
-          onDragEnd={this._onDragEvent}
+          onAmapDragEnd={this._onAmapDragEvent}
           onInfoWindowPress={this._onInfoWindowPress}
           coordinate={this._coordinates[0]}
         />

@@ -132,7 +132,7 @@ import { MapView } from 'react-native-amap3d'
   <MapView.Marker
     draggable
     title='这是一个可拖拽的标记'
-    onDragEnd={({ nativeEvent }) =>
+    onAmapDragEnd={({ nativeEvent }) =>
       console.log(`${nativeEvent.latitude}, ${nativeEvent.longitude}`)}
     coordinate={{
       latitude: 39.91095,

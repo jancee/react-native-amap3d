@@ -65,15 +65,15 @@ class AMapView(context: Context) : TextureMapView(context) {
 
         map.setOnMarkerDragListener(object : AMap.OnMarkerDragListener {
             override fun onMarkerDragStart(marker: Marker) {
-                emit(markers[marker.id]?.id, "onDragStart")
+                emit(markers[marker.id]?.id, "onAmapDragStart")
             }
 
             override fun onMarkerDrag(marker: Marker) {
-                emit(markers[marker.id]?.id, "onDrag")
+                emit(markers[marker.id]?.id, "onAmapDrag")
             }
 
             override fun onMarkerDragEnd(marker: Marker) {
-                emit(markers[marker.id]?.id, "onDragEnd", marker.position.toWritableMap())
+                emit(markers[marker.id]?.id, "onAmapDragEnd", marker.position.toWritableMap())
             }
         })
 
